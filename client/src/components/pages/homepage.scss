@@ -1,0 +1,30 @@
+.hero {
+  text-align: center;
+  background: url("https://demo.vendure.io/assets/preview/40/abel-y-costa-716024-unsplash__preview.jpg")
+    no-repeat center;
+  background-size: cover;
+  min-height: 60vh;
+  width: 100%;
+  h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 10vh;
+    color: #2f4858;
+    font-family: Didact Gothic, serif;
+    @media (max-width: 768px) {
+      width: auto;
+      padding: 10px;
+    }
+  }
+}
+.category {
+  background: #2f4858;
+  margin: 20px 0;
+  font-family: roboto, serif;
+  padding: 10px 0 10px 40px;
+  text-decoration: underline;
+  a {
+    text-decoration: none;
+    color: #e4e4e4;
+  }
+}

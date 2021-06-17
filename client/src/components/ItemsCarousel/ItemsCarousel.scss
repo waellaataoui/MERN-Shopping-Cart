@@ -1,0 +1,29 @@
+.container {
+  padding: 0 60px;
+  margin: 0 auto;
+}
+.item {
+  width: "100%";
+  p {
+    text-align: center;
+    margin: 0;
+  }
+}
+.arrowButton {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transition: all 0.2s ease;
+  &:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+  }
+}

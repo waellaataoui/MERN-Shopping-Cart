@@ -1,0 +1,33 @@
+.products-list {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.products-container {
+  text-align: center;
+  @media (min-width: 768px) {
+    padding: 20px 10px;
+    display: flex;
+    .filters {
+      min-width: 25%;
+    }
+  }
+}
+.filters {
+  text-align: center;
+  padding: 0 5px;
+  p {
+    font-size: "1.2rem";
+  }
+}
+.error-message {
+  color: crimson;
+  text-align: center;
+  margin: auto;
+  padding: 40px 20px;
+  font-size: 20px;
+  font-family: "Gothic", Arial, sans-serif;
+}

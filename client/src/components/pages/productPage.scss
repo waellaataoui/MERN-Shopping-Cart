@@ -1,0 +1,80 @@
+.carousel-container {
+  padding: 0 60px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 40%;
+    margin: 0;
+    text-align: center;
+  }
+}
+#highlights {
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+}
+.price {
+  display: flex;
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+  p {
+    margin: 10px;
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
+#list-price {
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 20px;
+  color: grey;
+  align-self: center;
+}
+#discount {
+  color: #f68c3d;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.product-details {
+  padding: 10px 10px 30px 10px;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.section-header {
+  color: #394f76;
+  font-weight: bold;
+}
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  a {
+    text-decoration: none;
+    padding: 5px;
+    color: #394f76;
+  }
+}
+.presentation {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.add-button {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f68c3d;
+  border: none;
+  border-radius: 13px;
+  @media (min-width: 768px) {
+    position: static;
+    width: auto;
+    padding: 15px 20px;
+  }
+}

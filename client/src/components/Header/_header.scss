@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  background-color: crimson;
+  font-family: roboto;
+  form {
+    margin: 0 10px;
+  }
+}
+.authButton {
+  margin-right: 80px;
+  background: transparent;
+  border: none;
+  align-self: center;
+  text-decoration: none;
+  color: #1b1a20;
+  font-size: large;
+  transition: all 0.2s ease;
+  &:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+  }
+}
