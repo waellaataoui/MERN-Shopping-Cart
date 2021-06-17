@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href="/auth/google") login g
+    a(href="/auth/facebook") login fb
+  a(href="auth/local?username=www&password=123") local
+
+  a(href="/auth/logout") logout
+

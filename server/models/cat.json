@@ -1,0 +1,19 @@
+{
+  "0": {
+    "name": "electronics",
+    "subcategories": [
+      { "name": "phones", "subcategories": [] },
+      {
+        "name": "accessories",
+        "subcategories": [
+          { "name": "keyboards", "subcategories": [] },
+          { "name": "headsets", "subcategories": [] }
+        ]
+      }
+    ]
+  },
+  "1": {
+    "name": "home",
+    "subcategories": []
+  }
+}
