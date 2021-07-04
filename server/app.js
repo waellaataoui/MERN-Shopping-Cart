@@ -39,10 +39,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors());
-app.use("/users", usersRouter);
-app.use("/auth", authRoutes(passport));
-app.use("/cart", cartRouter);
-app.use("/products", productRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/auth", authRoutes(passport));
+app.use("/api/cart", cartRouter);
+app.use("/api/products", productRouter);
 if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     app.use(express.static(publicPath));

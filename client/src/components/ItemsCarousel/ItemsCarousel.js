@@ -11,7 +11,7 @@ export default class ItemsCarousel extends React.Component {
     activeItemIndex: 0,
   };
   async componentWillMount() {
-    const res = await axios.get(`/products?category=${this.props.category}`);
+    const res = await axios.get(`/api/products?category=${this.props.category}`);
 
     await this.setState({
       children: this.createChildren(res.data.products),

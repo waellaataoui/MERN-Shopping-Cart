@@ -29,7 +29,7 @@ const ProductPage = (props) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`/products/${props.match.params.id}`);
+        const res = await axios.get(`/api/products/${props.match.params.id}`);
         setProduct(res.data);
         setChildren(createChildren(res.data.images));
       } catch (error) {

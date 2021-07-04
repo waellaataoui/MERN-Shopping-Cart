@@ -18,7 +18,7 @@ const logoutAction = () => ({
   type: LOGOUT,
 });
 export const login = (username, password) => async (dispatch) => {
-  const res = await axios.get("/auth/local", {
+  const res = await axios.get("/api/auth/local", {
     params: {
       username,
       password,
@@ -32,7 +32,7 @@ export const login = (username, password) => async (dispatch) => {
   }
 };
 export const logout = () => async (dispatch) => {
-  const res = await axios.get("/auth/logout");
+  const res = await axios.get("/api/auth/logout");
   if (res.status === 200) {
     dispatch(logoutAction());
     dispatch(getCart());
@@ -41,7 +41,7 @@ export const logout = () => async (dispatch) => {
 };
 export const register = (username, email, password) => async (dispatch) => {
   try {
-    const res = await axios.post("/users/register", {
+    const res = await axios.post("/api/users/register", {
       username,
       email,
       password,
@@ -61,6 +61,6 @@ export const register = (username, email, password) => async (dispatch) => {
 };
 
 export const getUser = () => async (dispatch) => {
-  const res = await axios.get("/users");
+  const res = await axios.get("/api/users");
   dispatch(getUserAction(res.data));
 };
