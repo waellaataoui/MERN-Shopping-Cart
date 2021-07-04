@@ -43,13 +43,13 @@ app.use("/api/users", usersRouter);
 app.use("/api/auth", authRoutes(passport));
 app.use("/api/cart", cartRouter);
 app.use("/api/products", productRouter);
-if (process.env.NODE_ENV === "production") {
-  app.get("*", (req, res) => {
-    app.use(express.static(publicPath));
-    console.log(path.join(publicPath, "index.html"));
-    res.sendFile(path.join(publicPath, "index.html"));
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+app.use(express.static(publicPath));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(publicPath, "index.html"));
+});
+// }
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
