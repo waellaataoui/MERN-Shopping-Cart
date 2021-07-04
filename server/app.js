@@ -17,7 +17,7 @@ const app = express();
 const keys = require("./config/keys");
 const publicPath = path.join(__dirname, "../client/build");
 // view engine setup
-
+console.log(publicPath);
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -46,7 +46,7 @@ app.use("/api/products", productRouter);
 if (process.env.NODE_ENV === "production") {
   app.get("*", (req, res) => {
     app.use(express.static(publicPath));
-
+    console.log(path.join(publicPath, "index.html"));
     res.sendFile(path.join(publicPath, "index.html"));
   });
 }
