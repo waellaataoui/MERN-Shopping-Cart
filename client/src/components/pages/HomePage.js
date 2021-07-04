@@ -18,7 +18,7 @@ const HomePage = () => {
       <h2 className="category">
         <Link to="/category/Home"> HOME & GARDEN: </Link>
       </h2>
-      <ItemsCarousel category="Electronics"></ItemsCarousel>
+      <ItemsCarousel category="Home"></ItemsCarousel>
     </div>
   );
 };

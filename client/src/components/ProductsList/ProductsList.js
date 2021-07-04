@@ -27,8 +27,7 @@ const ProductList = (props) => {
       try {
         setError(null);
         const res = await axios.get(
-          `/products?category=${category}&search=${search}&skip=${skip}&sort=${sort}&minPrice=${
-            price[0] || ""
+          `/api/products?category=${category}&search=${search}&skip=${skip}&sort=${sort}&minPrice=${price[0] || ""
           }&maxPrice=${price[1] || ""}`
         );
         const maxPrice = res.data.maxPrice;
@@ -36,7 +35,7 @@ const ProductList = (props) => {
         setProducts(res.data.products);
         setCount(res.data.count);
       } catch (error) {
-        setError(error.response.data);
+        setError(error.response?.data);
       }
     };
     setProducts([]);
