@@ -1,20 +1,20 @@
-// add this file to .gitignore
+const dotenv = require('dotenv');
 
+dotenv.config();
 module.exports = {
   google: {
-    clientID:
-      "1016293595899-ssle0v235psdt1pbpvecascu54ckpsut.apps.googleusercontent.com",
-    clientSecret: "7HS0hTPA2qcx2MevMhQlmZCp"
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET
   },
   facebook: {
-    appSecret: "dd7d84d64ad94324767d4566301b8d8b",
-    appID: "176745403619992"
+    appSecret: process.env.FACEBOOK_APP_SECRET,
+    appID: process.env.FACEBOOK_APP_ID
   },
 
   mongodb: {
-    dbURI: "mongodb://127.0.0.1:27017/shopping-cart"
+    dbURI: process.env.MONGO_URI
   },
   session: {
-    cookieKey: "thenetninjaisawesomeiguess"
+    cookieKey: process.env.COOKIE_KEY
   }
 };
